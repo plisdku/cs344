@@ -13,7 +13,9 @@ find_package(CUDA REQUIRED)
 
 link_libraries(${OpenCV_LIBS} )
 
-set (EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/bin/")
+#set (EXECUTABLE_OUTPUT_PATH "${CMAKE_BUILD_DIR}/bin/")
+#message("exec output path is ${EXECUTABLE_OUTPUT_PATH}")
+#file (MAKE_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
 
 if(CUDA_FOUND)
   # compared to class settings, we let NVidia's FindCUDA CMake detect 
@@ -33,7 +35,7 @@ if(CUDA_FOUND)
   # add -Wextra compiler flag for gcc compilations
   if (UNIX)
     set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS} "-Xcompiler -Wextra")
-    set(CMAKE_CXX_FLAGS "-stdlib=libstdc++")
+    #set(CMAKE_CXX_FLAGS "-stdlib=libstdc++") # for CUDA versions < 7
   endif (UNIX)
 
   # add debugging to CUDA NVCC flags.  For NVidia's NSight tools.
