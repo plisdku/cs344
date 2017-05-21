@@ -7,6 +7,8 @@
 
 # collect source files
 
+project(HW2)
+
 file( GLOB  hdr *.hpp *.h )
 file( GLOB  cu  *.cu)
 SET (HW2_files main.cpp reference_calc.cpp compare.cpp)

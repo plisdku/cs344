@@ -7,6 +7,8 @@
 
 # collect source files
 
+project(HW4)
+
 file( GLOB  hdr *.hpp *.h )
 file( GLOB  cu  *.cu)
 SET (HW4_files main.cpp loadSaveImage.cpp reference_calc.cpp compare.cpp)

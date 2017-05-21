@@ -6,6 +6,9 @@
 ############################################################################
 # minimum required cmake version
 cmake_minimum_required(VERSION 2.8)
+
+project(HW3)
+
 find_package(CUDA QUIET REQUIRED)
 
 SET (compare_files compare.cpp)

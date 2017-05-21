@@ -7,6 +7,8 @@
 
 # collect source files
 
+project(HW6)
+
 file( GLOB  hdr *.hpp *.h )
 
 SET (HW6_files student_func.cu HW6.cu main.cpp loadSaveImage.cpp reference_calc.cpp compare.cpp)
